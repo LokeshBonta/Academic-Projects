@@ -1,6 +1,5 @@
 # Grokking Dynamic Programming Patterns for Coding Interviews
-
-
+https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews
 
 ## Pattern 1: 0/1 Knapsack
 
