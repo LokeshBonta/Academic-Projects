@@ -17,3 +17,9 @@ T min( T in1, T in2)
     return std::min(in1, in2);
 }
 
+template <typename T>
+T my_min( T in1, T in2)
+{
+    if(in1 < in2) return in1;
+    else return in2;
+}

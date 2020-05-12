@@ -13,17 +13,17 @@ TEST(SquareRootTest, NegativeNos) {
     ASSERT_EQ(-1.0, squareRoot(-15.0));
     ASSERT_EQ(-1.0, squareRoot(-0.2));
 }
- 
+
  TEST(min, IntValues)
  {
-     ASSERT_EQ(1, min( 1, 2));
-     ASSERT_EQ(5, min(7, 5));
+     ASSERT_EQ(my_min( 1, 2), min( 1, 2));
+     ASSERT_EQ(my_min(7, 5), min(7, 5));
  }
 
  TEST(min, FloatValues)
  {
-     ASSERT_EQ(float(1), min(1.0, 6.2));
-     ASSERT_EQ(float(5), min(7.5, 5.0));
+     ASSERT_EQ(my_min(1.0, 6.2), min(1.0, 6.2));
+     ASSERT_EQ(my_min(7.5, 5.0), min(7.5, 5.0));
  }
 
 int main(int argc, char **argv) {
