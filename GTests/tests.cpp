@@ -14,6 +14,18 @@ TEST(SquareRootTest, NegativeNos) {
     ASSERT_EQ(-1.0, squareRoot(-0.2));
 }
  
+ TEST(min, IntValues)
+ {
+     ASSERT_EQ(1, min( 1, 2));
+     ASSERT_EQ(5, min(7, 5));
+ }
+
+ TEST(min, FloatValues)
+ {
+     ASSERT_EQ(float(1), min(1.0, 6.2));
+     ASSERT_EQ(float(5), min(7.5, 5.0));
+ }
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

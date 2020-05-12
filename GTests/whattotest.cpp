@@ -1,5 +1,6 @@
 // whattotest.cpp
 #include <math.h>
+#include<algorithm>
  
 double squareRoot(const double a) {
     double b = sqrt(a);
@@ -9,3 +10,10 @@ double squareRoot(const double a) {
         return sqrt(a);
     }
 }
+
+template <typename T>
+T min( T in1, T in2)
+{
+    return std::min(in1, in2);
+}
+
