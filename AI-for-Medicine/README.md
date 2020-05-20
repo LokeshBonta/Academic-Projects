@@ -26,12 +26,3 @@
     + []()
 
 
-**Instructors**: `Pranav Rajpurkar`, `Bora Uyumazturk`, `Amirhossein Kiani` and `Eddy Shyu`.
-
-These course materials belong entirely to `deeplearning.ai`. The solutions are only mine.
-
-
-<kbd><img src="https://github.com/ChanchalKumarMaji/AI-for-Medicine-Specialization-deeplearning.ai/blob/master/AI%20for%20Medical%20Diagnosis/Certificate/Certificate.jpg" /></kbd>
-
-
-<kbd><img src="https://github.com/ChanchalKumarMaji/AI-for-Medicine-Specialization-deeplearning.ai/blob/master/AI%20for%20Medical%20Prognosis/Certificate/Certificate.jpg" /></kbd>
