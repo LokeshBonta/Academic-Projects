@@ -1,3 +1,3 @@
-## Dynamic Programming Based Problems
+## Dynamic Programmig based problems
 
-1. Number of steps from N to 1
+1. Minimum number of steps from N to 1
