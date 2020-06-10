@@ -18,6 +18,9 @@ Input: coins = [2], amount = 3
 Output: -1
 Note:
 You may assume that you have an infinite number of each kind of coin.
+
+Copyright Lokeswara Rao Bonta - 2020
+DS & Algo - Dynamic Programming Section
 */
 #include <iostream>
 #include <algorithm>
