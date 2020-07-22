@@ -1,15 +1,14 @@
 #include "integer.h"
 #include <memory>
 
-clss Project
-{
-
+clss Project{
 
 };
 
 class Employee
 {
-    std::shared_ptr<Prject> m_pProject; 
+    std::shared_ptr<Prject> m_pProject;
+
 public:
     void setProject(std::shared_ptr<Project> p)
     {
@@ -30,6 +29,6 @@ Employee *assignProject()
 
 int main()
 {
-    
+
     return 0;
 }

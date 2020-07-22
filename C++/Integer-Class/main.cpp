@@ -1,33 +1,40 @@
 #include "Integer.h"
 #include <iostream>
 #include <memory>
-class IntPtr {
+class IntPtr
+{
 	Integer *m_p;
-public:
-	IntPtr(Integer *p) :m_p(p) {
 
+public:
+	IntPtr(Integer *p) : m_p(p)
+	{
 	}
-	~IntPtr() {
+	~IntPtr()
+	{
 		delete m_p;
 	}
-	Integer *operator ->() {
+	Integer *operator->()
+	{
 		return m_p;
 	}
-	Integer & operator *() {
+	Integer &operator*()
+	{
 		return *m_p;
 	}
 };
-void CreateInteger() {
+void CreateInteger()
+{
 	std::unique_ptr<Integer> p(new Integer);
 	//auto p2(p);
 	(*p).SetValue(3);
-	//std::cout << p->GetValue() << std::endl; 
+	//std::cout << p->GetValue() << std::endl;
 }
-void Process(Integer val) {
-
+void Process(Integer val)
+{
 }
 
-int main() {
+int main()
+{
 	Integer a(3);
 	/*auto b(std::move(a));
 	std::cout << a << std::endl;*/
