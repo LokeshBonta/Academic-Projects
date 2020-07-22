@@ -16,17 +16,17 @@ DS & Algo - Dynamic Programming Section
 #include <limits.h>
 int memoMinSteps(int n, int *memo)
 {
-    if(n == 1)
+    if (n == 1)
     {
         memo[1] = 0;
         return 0;
     }
-    if(memo[n] != 0)
+    if (memo[n] != 0)
         return memo[n];
-    int result = memoMinSteps(n-1, memo);
-    if(n%2 == 0)
+    int result = memoMinSteps(n - 1, memo);
+    if (n % 2 == 0)
         result = std::min(result, memoMinSteps(n / 2, memo));
-    if(n%3 == 0)
+    if (n % 3 == 0)
         result = std::min(result, memoMinSteps(n / 3, memo));
     memo[n] = result + 1;
     return memo[n];
@@ -34,26 +34,26 @@ int memoMinSteps(int n, int *memo)
 int recMinsteps(int n)
 {
     int result = 0;
-    if(n == 1) // Base Case
+    if (n == 1) // Base Case
         return 0;
-    result = recMinsteps(n-1);
-    if(n%2 == 0)
+    result = recMinsteps(n - 1);
+    if (n % 2 == 0)
         result = std::min(result, recMinsteps(n / 2));
-    if(n%3 == 0)
+    if (n % 3 == 0)
         result = std::min(result, recMinsteps(n / 3));
     return result + 1;
 }
 int bottumUpMinSteps(int n, std::vector<int> &memo)
 {
     memo[1] = 0;
-    for(int i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        if( i+1 <= n )
-            memo[i+1] = std::min(memo[i+1], memo[i] + 1);
-        if (2*i <= n)
-            memo[2*i] = std::min(memo[2*i], memo[i] + 1);
-        if (3*i <= n)
-            memo[3*i] = std::min(memo[3*i], memo[i] + 1);
+        if (i + 1 <= n)
+            memo[i + 1] = std::min(memo[i + 1], memo[i] + 1);
+        if (2 * i <= n)
+            memo[2 * i] = std::min(memo[2 * i], memo[i] + 1);
+        if (3 * i <= n)
+            memo[3 * i] = std::min(memo[3 * i], memo[i] + 1);
     }
     return memo[n];
 }
@@ -62,12 +62,12 @@ int main(int argc, char *argv[])
 {
     int n;
     std::cout << "Enter the number: " << std::endl;
-    std::cin  >> n;
+    std::cin >> n;
     int memo[MAX_SIZE];
     //int min_steps = recMinsteps(n);
     //int min_steps = memoMinSteps(n, memo);
-    std::vector<int> bu_array(n+1, 100);
+    std::vector<int> bu_array(n + 1, 100);
     int min_steps = bottumUpMinSteps(n, bu_array);
-    std::cout << "Minimum number of steps to reach 1 is"<< min_steps << std::endl;
+    std::cout << "Minimum number of steps to reach 1 is" << min_steps << std::endl;
     return 0;
 }
